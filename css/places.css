@@ -1,0 +1,87 @@
+body {
+    background: linear-gradient(30deg, rgb(77, 77, 77), rgb(58, 58, 58));
+    color: rgb(68, 68, 68);
+}
+
+#page-logo a{
+    color: rgb(183, 230, 235);
+}
+
+header {
+    position: static;
+}
+header a{
+    color: rgb(183, 230, 235);
+}
+
+header nav a:hover{
+    background-color: rgb(183, 230, 235);
+    color: rgb(59, 59, 59);
+}
+
+main ul {
+    width: 1200;
+    margin: 0 auto;
+    max-width: 1200px;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    /* single row ko double me shift karne ke liye (using 2fr gives 2 cols) */
+    gap: 20px 20px;
+    /* Used for giving row and cols gap */
+}
+
+li:nth-of-type(3) {
+    /*to choose specific list item inside list item*/
+    grid-column: 1 / span 2;
+    /*start at 1 col and span over to 2 cols*/
+}
+
+ul {
+    padding: 0px;
+    list-style: none;
+}
+
+main li {
+    display: flex;
+    margin: 20px;
+    background-color: white;
+    box-shadow: 1px 1px 4px rgba(0, 0, 0, 0.2);
+    border-radius: 6px;
+    overflow: hidden;
+    /*agar list me image ko round karna ho (on one side) toh use this :D */
+
+}
+
+main li img {
+    width: 300px;
+    height: 280px;
+    object-fit: cover;
+    /* image ko dhanka banane ke liye*/
+
+}
+
+.item-content {
+    padding: 24px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.item-content h2{
+    margin: 0;
+}
+
+.actions {
+    text-align: right;
+}
+
+.actions a {
+    text-decoration: none;
+    padding: 6px;
+    color: rgb(22, 211, 228);
+    border-radius: 5px;
+}
+
+.actions a:hover {
+    background-color: rgb(235, 253, 255);
+}
